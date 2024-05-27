@@ -14,4 +14,8 @@ app.use("/users", userRouter);
 app.use("/posts", postRouter);
 app.use("/comments", commentRouter);
 
+app.get("/", (req, res) => {
+  res.json({ msg: "welcome" });
+});
+
 app.listen(port, () => console.log(`app listening on port ${port}!`));
